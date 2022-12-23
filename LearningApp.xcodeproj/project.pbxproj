@@ -21,6 +21,7 @@
 		D3E2A01129393057005C881F /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2A01029393057005C881F /* ContentDetailView.swift */; };
 		D3E2A014293934C6005C881F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E2A013293934C6005C881F /* AVKit.framework */; };
 		D3E2A01629393594005C881F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E2A01529393594005C881F /* Constants.swift */; };
+		D3F7EBD82954E84B00EE0531 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7EBD72954E84B00EE0531 /* CodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D3E2A01029393057005C881F /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		D3E2A013293934C6005C881F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		D3E2A01529393594005C881F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D3F7EBD72954E84B00EE0531 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				D3E2A00C29392677005C881F /* ContentView.swift */,
 				D3E2A00E29392E68005C881F /* ContentViewRow.swift */,
 				D3E2A01029393057005C881F /* ContentDetailView.swift */,
+				D3F7EBD72954E84B00EE0531 /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				D3E2A01129393057005C881F /* ContentDetailView.swift in Sources */,
 				D3E2A00929391594005C881F /* Module.swift in Sources */,
 				D3E2A00F29392E68005C881F /* ContentViewRow.swift in Sources */,
+				D3F7EBD82954E84B00EE0531 /* CodeTextView.swift in Sources */,
 				D30F12DA2937F20000689353 /* LearningApp.swift in Sources */,
 				D30F12ED2937F2FD00689353 /* ContentModel.swift in Sources */,
 				D3E2A01629393594005C881F /* Constants.swift in Sources */,

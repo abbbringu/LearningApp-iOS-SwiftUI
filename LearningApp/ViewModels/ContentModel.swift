@@ -19,7 +19,8 @@ class ContentModel: ObservableObject {
     @Published var currentLesson: Lessons?
     var currentLessonIndex = 0
     
-    
+    // Current lesson explination
+    @Published var lessonDescription = NSAttributedString()
     var styleData: Data?
     
     init() {
@@ -86,6 +87,7 @@ class ContentModel: ObservableObject {
             currentLessonIndex = 0
         }
         currentLesson = currentModule!.content.lessons[currentLessonIndex]
+        lessonDescription = addStyling(currentLesson!.explanation)
         
     }
     
@@ -102,11 +104,32 @@ class ContentModel: ObservableObject {
         if currentLessonIndex < currentModule!.content.lessons.count {
             
             currentLesson = currentModule!.content.lessons[currentLessonIndex]
+            lessonDescription = addStyling(currentLesson!.explanation)
             
         } else {
             // Reset the lesson state
             currentLesson = nil
             currentLessonIndex = 0
         }
+    }
+    
+    // MARK: Make string to attributed text
+    
+    private func addStyling(_ htmlString: String) -> NSAttributedString {
+        var resultStrings = NSAttributedString()
+        var data = Data()
+        // Add styling
+        if styleData != nil {
+            data.append(self.styleData!)
+        }
+        // Add the html data
+        data.append(Data(htmlString.utf8))
+        // Convert to attributed strings
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+                
+            resultStrings = attributedString
+        }
+        
+        return resultStrings
     }
 }
